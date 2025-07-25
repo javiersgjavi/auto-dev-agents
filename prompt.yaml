@@ -1,0 +1,15 @@
+requirements: |
+  A simple membership management system for a gym.
+  The system should allow users to:
+    - Register a new member with their name and membership type (e.g., "basic", "premium").
+    - Check in a member when they arrive at the gym (only if their membership is active).
+    - Cancel a membership.
+    - View a member's current status (active or cancelled).
+    - View a log of all check-ins per member, including timestamps.
+  The system should ensure:
+    - A cancelled member cannot check in.
+    - All check-ins are timestamped and associated with the correct member.
+  The system must be implemented as a single Python module.
+  The module will be named {module_name} and must contain a single class named {class_name}.
+module_name: "gym_membership.py"
+class_name: "GymMembership"
