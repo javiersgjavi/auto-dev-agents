@@ -2,6 +2,22 @@
 
 This project showcases a basic **CrewAI** setup for automating code generation. The agents take the high-level requirements described in `prompt.yaml` and coordinate the design, implementation and testing of a small Python project.
 
+## Agents and tasks
+
+Four specialized agents collaborate on this project:
+
+- **Engineering Lead** – prepares a detailed design for the module based on the high-level requirements.
+- **Backend Engineer** – implements the Python module described in the design.
+- **Frontend Engineer** – provides a simple Gradio interface demonstrating the backend.
+- **Test Engineer** – writes unit tests for the generated module.
+
+They execute the following tasks in order:
+
+1. **design_task** – produces a Markdown design document outlining classes and functions.
+2. **code_task** – generates the backend module implementing the design.
+3. **frontend_task** – creates a minimal Gradio app showcasing the backend.
+4. **test_task** – generates automated tests for the backend module.
+
 ## Repository structure
 
 ```
@@ -19,22 +35,6 @@ auto-dev-agents/
 ```
 
 The `output/` directory will be created when running the crew and will contain the design, generated code and tests.
-
-## Agents and tasks
-
-Four specialized agents collaborate on this project:
-
-- **Engineering Lead** – prepares a detailed design for the module based on the high-level requirements.
-- **Backend Engineer** – implements the Python module described in the design.
-- **Frontend Engineer** – provides a simple Gradio interface demonstrating the backend.
-- **Test Engineer** – writes unit tests for the generated module.
-
-They execute the following tasks in order:
-
-1. **design_task** – produces a Markdown design document outlining classes and functions.
-2. **code_task** – generates the backend module implementing the design.
-3. **frontend_task** – creates a minimal Gradio app showcasing the backend.
-4. **test_task** – generates automated tests for the backend module.
 
 ## Dependency management
 
